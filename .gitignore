@@ -31,7 +31,7 @@ Temporary Items
 # End of https://www.gitignore.io/api/macos
 #
 ssh/.ssh/*
-!ssh/.ssh/config
+!ssh/.ssh/config.sample
 etc
 fishd.*
 fish_variables

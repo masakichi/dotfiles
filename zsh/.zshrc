@@ -50,8 +50,6 @@ bindkey '^[[B' history-substring-search-down
 # common
 #####################################################################
 
-source ~/.secrets
-
 export EDITOR=vim
 export TERM=xterm-256color
 export BROWSER=chromium
@@ -70,15 +68,9 @@ alias open='a -e xdg-open'
 alias cat=bat
 alias v='f -e vim'
 alias sudo='sudo '
-alias pbcopy='xsel --clipboard --input'
-alias webfs='webfsd -F -r'
-alias reiwd='sudo systemctl restart iwd.service'
 
 function zsh_stats() {
   fc -l 1 | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n20
 }
-
-eval `keychain --eval --agents ssh --quiet id_ed25519`
-eval `keychain --eval --agents gpg --quiet 3CB6EA7C55827AAD`
 
 eval "$(fasd --init auto)"

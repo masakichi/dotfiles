@@ -2,17 +2,10 @@
 items=(
     "zsh"
     "git"
+    "tmux"
     "tig"
-    #"libinput-gestures"
-    "misc"
-    #"nvim"
     "ssh"
-    "chromium"
-    "gnupg"
-    "fonts"
-    "fontconfig"
     "pacman"
-    "rime"
 )
 
 for item in "${items[@]}" ; do
